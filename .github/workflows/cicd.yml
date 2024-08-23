@@ -1,4 +1,4 @@
-name: Deploy SpringBoot
+name: Deploy Spring Boot
 
 on:
   push:
