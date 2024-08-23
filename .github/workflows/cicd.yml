@@ -41,17 +41,17 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: Clean up disk space
+      - name: Clean up disk space before pulling image
         run: |
           sudo docker system prune -a -f
           sudo docker volume prune -f
           sudo docker network prune -f
 
+      - name: Check available disk space
+        run: df -h
+
       - name: Pull Image from Docker Hub
         run: sudo docker pull laila23/springboot-example:latest
-
-      - name: Check disk space
-        run: df -h
 
       - name: Delete old container
         run: sudo docker rm -f springboot-example-container || true
