@@ -31,7 +31,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: self-hosted
+    runs-on: [spring-runner]
     steps:
       - name: Check Docker Login
         run: sudo docker info
