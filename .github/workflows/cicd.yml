@@ -41,8 +41,11 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: Clean up unused Docker images
-        run: sudo docker system prune -f
+      - name: Clean up disk space
+        run: |
+          sudo docker system prune -a -f
+          sudo docker volume prune -f
+          sudo docker network prune -f
 
       - name: Pull Image from Docker Hub
         run: sudo docker pull laila23/springboot-example:latest
@@ -51,8 +54,7 @@ jobs:
         run: df -h
 
       - name: Delete old container
-        run: sudo docker rm -f springboot-example-container
+        run: sudo docker rm -f springboot-example-container || true
 
       - name: Run Docker container
         run: sudo docker run -d -p 8080:8080 --name springboot-example-container laila23/springboot-example
-
