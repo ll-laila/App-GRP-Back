@@ -11,7 +11,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
 
-      - name: Clean up disk space
+      - name: Clean up disk space before build
         run: |
           sudo rm -rf /opt/java/openjdk
           sudo apt-get clean
@@ -46,12 +46,13 @@ jobs:
           sudo docker system prune -a -f
           sudo docker volume prune -f
           sudo docker network prune -f
-
-      - name: Check available disk space
-        run: df -h
+          sudo df -h
 
       - name: Pull Image from Docker Hub
         run: sudo docker pull laila23/springboot-example:latest
+
+      - name: Check available disk space
+        run: df -h
 
       - name: Delete old container
         run: sudo docker rm -f springboot-example-container || true
