@@ -17,8 +17,7 @@
       <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/cicd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/cicd.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../mvnw" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../mvnw.cmd" beforeDir="false" />
@@ -908,6 +907,7 @@
       <workItem from="1723659332534" duration="6679000" />
       <workItem from="1723704369736" duration="12972000" />
       <workItem from="1724400485961" duration="14159000" />
+      <workItem from="1724499412125" duration="64000" />
     </task>
     <servers />
   </component>
