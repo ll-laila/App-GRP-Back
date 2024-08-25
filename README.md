@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-### Installation
+## Installation
 
 1. Clone the repository or download the ZIP file.
 ```bash
